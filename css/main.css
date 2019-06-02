@@ -1,0 +1,42 @@
+html, body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin: 10px;
+}
+.stop {
+  color: #fff;
+  background-color: #000;
+}
+.dialogue{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+  width: 70%;
+  padding: 20px;
+}
+.dialogue__text{
+  display: inline;
+}
+.controller {
+  display: flex;
+  justify-content: center;
+}
+a {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+}
