@@ -1,30 +1,38 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    <title>lv5: 傳送</title>
-    <meta charset="utf-8" />
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <link rel="stylesheet" href="css/main.css" />
+    <title> r3:0 lv5 </title>
+    <meta charset='utf-8' />
+    <link rel='stylesheet' href='css/main.css' />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC|Overpass+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
-    <script>
-      window.location = '/lv6.php?token=fail';
-    </script>
-    <?php
-      $token = $_GET['token'];
-      if($token !== 'csspersona'){
-        echo "<pre>
-             > 腦子裡又浮出 m3nT0r 的聲音
-            「請使用正確的正確的 token 呦，不然沒辦法到異世界 <3 」
-            </pre>";
-      } else {
-        echo "<h1>lv5 鎮</h1>";
-        echo "<div class='dialogue'>";
-        echo "<div class='dialogue__text'>{redirectnew}</div>";
-        echo "</div>";
-        echo "</div>";
+    <nav class='nav'>
+      <div> r3:0 異世界網站挑戰 </div>
+      <div> 關卡: 5 </div>
+      <?php
+      if(isset($_GET['hint'])){
+        if($_GET['hint']==='help'){
+          echo "<div>[大賢者] javascript 出了什麼事了</div>";
+        }
       }
-    ?>
+      ?>
+    </nav>
+    <?php
+      if(isset($_GET['token']) && $_GET['token']==='csspersona') {
+        ?> 
+        <script src='js/lv5.js'></script>
+        <?php
+      } else {
+        echo "<div class='board'>"; 
+        echo "<div class='board__content'>輸入錯誤 token 傳送失敗</div>";
+        echo "</div>";
+        ?>
+        <div class='controller'>
+          <a href='./index.html'>從頭再來</a>
+          <a onclick='history.back()'>回上一關</a>
+        </div>
+        <?php
+        }
+        ?>
   </body>
 </html>

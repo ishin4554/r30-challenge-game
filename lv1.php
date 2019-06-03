@@ -1,62 +1,50 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    <title>lv1: 聽不懂的小鎮</title>
-    <meta charset="utf-8" />
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <link rel="stylesheet" href="css/main.css" />
+    <title> r3:0 lv1 </title>
+    <meta charset='utf-8' />
+    <link rel='stylesheet' href='css/main.css' />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC|Overpass+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
+    <nav class='nav'>
+      <div> r3:0 異世界網站挑戰 </div>
+      <div> 關卡: 1 </div>
+      <?php
+      if(isset($_GET['hint'])){
+        if($_GET['hint']==='help'){
+          echo "<div>[大賢者] 想想看 query string</div>";
+        }
+      }
+      ?>
+    </nav>
     <?php
-      $token = $_GET['token'];
-      if($token !== 'r30:start'){
-        echo "<pre>
-             > 腦子裡又浮出 m3nT0r 的聲音
-            「請使用正確的正確的 token 呦，不然沒辦法到異世界 <3 」
-            </pre>";
+      if(isset($_GET['token']) && $_GET['token']==='r30:start') {
+        ?> 
+        <?php
+          echo "<div class='board'>"; 
+          echo "<div class='board__content'></div>";
+          echo "</div>";
+        ?>
+        <div class='controller'>
+          <div class='controller__jump'>jump</div>
+          <div class='controller__stop'>stop</div>
+          <div class='controller__continue'>continure</div>
+          <div class='controller__replay'>replay</div>
+        </div>
+        <script src='js/lv1.js'></script>
+        <script src='js/main.js'></script>
+        <?php
       } else {
-        echo "<h1>lv1 村</h1>";
-        echo "<div class='dialogue'>";
-        echo "<div class='dialogue__text'></div>";
-        echo "<div class='controller'>";
-        echo "<div class='btn stop tbc'>暫停</div>";
-        echo "<div class='btn restart'>重播</div>";
+        echo "<div class='board'>"; 
+        echo "<div class='board__content'>輸入錯誤 token 傳送失敗</div>";
         echo "</div>";
-        echo "</div>";
-      }
-    ?>
-  <script>
-    let count = 0;
-    let lv1 = {
-      strings: [
-        "又是一陣白光",
-        "再睜開眼，是一個混亂的市集，衝過我旁邊的村民講著我聽不懂的語言",
-        "<b>村民: 100101001001100001110</b> ",
-        "這是在 ...... 求救嗎？ （一個村民死死地抓著我說著一句話）",
-        "完全聽不懂啊，難道他在告訴我怪物的名字？",
-        "<b>村民: 100101001001100001110</b> ",
-        "但這個語言，我似乎見過，我要趕快把怪物的名字用十八進位的語言傳給女神才行",
-        "通往 lv2: 解開 100101001001100001110 之謎"
-      ],
-      typeSpeed: 60,
-      smartBackspace: false,
-      showCursor: false,
-    }
-    var typed = new Typed(".dialogue__text", lv1);
-    let btn = document.querySelector('.tbc');
-    btn.addEventListener('click', () => {
-      typed.toggle();
-      btn.classList.toggle('stop');
-      if (btn.innerText === '暫停') {
-        btn.innerText = '繼續';
-      } else {
-        btn.innerText = '暫停';
-      }
-    })
-    document.querySelector('.restart').addEventListener('click', () => {
-      typed.reset(true);
-    });
-  </script>
+        ?>
+        <div class='controller'>
+          <a href='./index.html'>從頭再來</a>
+          <a onclick='history.back()'>回上一關</a>
+        </div>
+        <?php
+        }
+        ?>
   </body>
 </html>

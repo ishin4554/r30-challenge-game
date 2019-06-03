@@ -1,0 +1,1 @@
+window.location='./lv6.php?token=fail';
