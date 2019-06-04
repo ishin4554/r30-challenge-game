@@ -27,6 +27,10 @@ let strings = [
     name: 'me',
     content: "誰...誰單身了！可惡，名字都寫在臉上了，看我還不幹死你！",
   },
+  {
+    name: 'system',
+    content: "[系統] 前往 lv5: 再一次找出怪物的真身",
+  },
 ];
 
 function dq(selector) {

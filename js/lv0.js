@@ -38,7 +38,7 @@ let strings = [
   {
     name: 'other',
     content: `m3nT0r : 我們需要你運用你的知識，辨認出各地的怪物，用 token 告訴我們怪物的資訊讓我們可以進行處理！
-    現在給你一個 token {re0:start} 利用這個 token 快點過去吧，有一個地方已經十萬火急了。`,
+    現在給你一個 token {r30:start} 利用這個 token 快點過去吧，有一個地方已經十萬火急了。`,
   },
   {
     name: 'me',
@@ -59,5 +59,9 @@ let strings = [
   {
     name: 'system',
     content: "[系統] 例如： /lv1.php?hint=help",
+  },
+  {
+    name: 'system',
+    content: "[系統] 前往 lv1 : 請透過 query string 傳入 token",
   },
 ];

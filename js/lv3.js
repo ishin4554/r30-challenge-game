@@ -25,6 +25,6 @@ let strings = [
   },
   {
     name: 'system',
-    content: "[系統] 請找出潛藏在瀏覽器中的第二個怪物",
+    content: "[系統] 前往 lv4: 請找出潛藏在瀏覽器中的第二個怪物",
   },
 ];

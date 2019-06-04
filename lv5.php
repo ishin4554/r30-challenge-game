@@ -18,8 +18,11 @@
       ?>
     </nav>
     <?php
-      if(isset($_GET['token']) && $_GET['token']==='csspersona') {
+      if(isset($_GET['token']) && $_GET['token']==='csspersona!') {
         ?> 
+        <div class='board'> 
+          <div class='board__content'>{redirectnew}</div>
+        </div>
         <script src='js/lv5.js'></script>
         <?php
       } else {

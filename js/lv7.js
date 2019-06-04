@@ -46,7 +46,8 @@ function typingEffect() {
       item.classList.add('system--text');
     } else if (countStr === strings.length - 1) {
       const request = new XMLHttpRequest();
-      request.open('GET', '')
+      request.open('GET', './ajax.php');
+      request.send();
     }
     dq('.board').append(item);
     typingEffect();

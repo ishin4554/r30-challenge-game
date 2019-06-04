@@ -19,6 +19,10 @@ let strings = [
     name: 'me',
     content: "讓我找出你的把戲！",
   },
+  {
+    name: 'system',
+    content: "[系統] 前往 lv6：找出跳關的把戲，得到 token",
+  },
 ];
 
 function dq(selector) {

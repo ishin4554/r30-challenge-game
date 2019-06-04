@@ -4,11 +4,11 @@ let strings = [
     content: "又是一陣白光",
   },
   {
-    name: 'sytem',
+    name: 'me',
     content: "再睜開眼，是一個混亂的市集，衝過我旁邊的村民講著我聽不懂的語言",
   },
   {
-    name: 'me',
+    name: 'system',
     content: "[系統] 傳送到了新的小鎮",
   },
   {
@@ -37,6 +37,6 @@ let strings = [
   },
   {
     name: 'system',
-    content: '[系統] 透過 token 將怪物的名字轉成十八進位傳給 m3nt0r',
+    content: '[系統] 前往 lv2: 透過 token 將怪物的名字轉成十八進位傳給 m3nt0r',
   },
 ];

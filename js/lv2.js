@@ -61,6 +61,6 @@ let strings = [
   },
   {
     name: 'system',
-    content: '[系統] 請找出藏在畫面裡面的怪物並用 token 傳給女神',
+    content: '[系統] 前往 lv3: 請找出藏在畫面裡面的怪物並用 token 傳給女神',
   },
 ];
