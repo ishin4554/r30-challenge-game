@@ -12,30 +12,25 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div>[大賢者] javascript 出了什麼事了</div>";
+          echo "<div class='nav__help'>[大賢者] javascript 出了什麼事了</div>";
         }
       }
       ?>
     </nav>
-    <?php
-      if(isset($_GET['token']) && $_GET['token']==='csspersona!') {
-        ?> 
-        <div class='board'> 
-          <div class='board__content'>{redirectnew}</div>
-        </div>
-        <script src='js/lv5.js'></script>
-        <?php
-      } else {
-        echo "<div class='board'>"; 
-        echo "<div class='board__content'>輸入錯誤 token 傳送失敗</div>";
-        echo "</div>";
-        ?>
-        <div class='controller'>
-          <a href='./index.html'>從頭再來</a>
-          <a onclick='history.back()'>回上一關</a>
-        </div>
-        <?php
-        }
-        ?>
+    <?php if(isset($_GET['token']) && $_GET['token']==='csspersona!') { ?> 
+      <div class='main'>
+        <?php include_once('template/board.html') ?>
+        <p> {windowhack} </p>
+        <?php include_once('template/controller.html') ?>
+      </div>
+      <script src='js/lv5.js'></script>
+    <?php } else { ?>
+      <div class='main'>
+        <?php include_once('template/board.html') ?>
+        <?php include_once('template/controller.html') ?>
+      </div>
+      <script src='js/main.js'></script>
+      <script src='js/failmsg.js'></script>        
+    <?php } ?>
   </body>
 </html>

@@ -64,3 +64,6 @@ let strings = [
     content: '[系統] 前往 lv3: 請找出藏在畫面裡面的怪物並用 token 傳給女神',
   },
 ];
+
+const type = new Type(strings)
+type.typingEffect();

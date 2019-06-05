@@ -25,73 +25,35 @@ let strings = [
   },
   {
     name: 'me',
-    content: "誰...誰單身了！可惡，名字都寫在臉上了，看我還不幹死你！",
-  },
-  {
-    name: 'system',
-    content: "[系統] 前往 lv5: 再一次找出怪物的真身",
+    content: "誰...誰單身了！可惡，人不可以只看表面！要重視內在！眼見不一定為真好嗎！？",
   },
 ];
 
-function dq(selector) {
-  return document.querySelector(selector);
-}
-
-let countStr = 0;
-let countChar = 0;
-let timer = 0;
-let speed = 100;
-
-function typingEffect() {
-  if (countChar < strings[countStr].content.length) {
-    dq('.board__content:last-child').innerHTML += strings[countStr].content.charAt(countChar);
-    countChar++;
-    timer = setTimeout(typingEffect, speed);
-  } else if(countStr < strings.length - 1) {
-    countStr++;
-    countChar = 0;
-    const item = document.createElement('div');
-    item.className = 'board__content';
-    if (strings[countStr].name === 'other') {
-      item.classList.add('name--text');
-    } else if (strings[countStr].name === 'system') {
-      item.classList.add('system--text');
-    } 
-    dq('.board').append(item);
-    typingEffect();
-  } else if(countStr === strings.length - 1) {
-    const item = document.createElement('div');
-    item.className = 'board__content';
-    item.classList.add('system--text');
-    item.innerHTML='[系統] 請找出 <span class="special">{csspersona!}</span> 真正的名字';
-    dq('.board').append(item);
+class lv4Type extends Type {
+  constructor(strings) {
+    super(strings);
+  }
+  typingEffect() {
+    if (this.countChar < this.strings[this.countStr].content.length) {
+      dq('.board__content:last-child').innerHTML += this.strings[this.countStr].content.charAt(this.countChar);
+      this.countChar++;
+      this.timer = setTimeout(this.typingEffect.bind(this), this.speed);
+    } else if(this.countStr < this.strings.length - 1) {
+      this.countStr++;
+      this.countChar = 0;
+      const item = document.createElement('div');
+      item.className = 'board__content';
+      this.switchStyle(item);
+      dq('.board').append(item);
+      this.typingEffect(); 
+    } else if(this.countStr === this.strings.length - 1) {
+      const item = document.createElement('div');
+      item.className = 'board__content system--text';
+      item.innerHTML='[系統] token <span class="special">{csspersona!}</span> 已經給你了';
+      dq('.board').append(item);
+    }
   }
 }
 
-typingEffect();
-
-function stopTyping() {
-  clearTimeout(timer);
-}
-
-function continueTyping() {
-  typingEffect()
-}
-
-function showAllText() {
-  speed = 0.5;
-}
-
-function replayText() {
-  dq('.board').innerHTML = '<div class="board__content"></div>';
-  countStr = 0;
-  countChar = 0; 
-  timer = 0; 
-  speed = 100; 
-  typingEffect();
-}
-
-dq('.controller__jump').addEventListener('click', showAllText);
-dq('.controller__stop').addEventListener('click', stopTyping);
-dq('.controller__continue').addEventListener('click', continueTyping);
-dq('.controller__replay').addEventListener('click', replayText);
+const type = new lv4Type(strings);
+type.typingEffect();

@@ -1,4 +1,10 @@
+* {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Overpass Mono', 'Noto Serif TC';
+}
 body {
+  background-color: #000;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -8,5 +14,15 @@ body {
   flex-direction: column;
 }
 pre {
-  height: 50%;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+}
+a:hover {
+  background: #fff;
+  color: #000;
 }

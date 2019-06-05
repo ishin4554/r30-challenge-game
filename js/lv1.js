@@ -40,3 +40,6 @@ let strings = [
     content: '[系統] 前往 lv2: 透過 token 將怪物的名字轉成十八進位傳給 m3nt0r',
   },
 ];
+
+const type = new Type(strings)
+type.typingEffect();

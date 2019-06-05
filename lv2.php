@@ -13,40 +13,26 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div>[大賢者] 可以查查看怎麼用 parseInt </div>";
+          echo "<div class='nav__help'>[大賢者] 可以查查看怎麼用 parseInt </div>";
         }
       }
       ?>
     </nav>
-    <?php
-      if(isset($_GET['token']) && $_GET['token']==='BAD18') {
-        ?> 
-        <?php
-          echo "<div class='board'>"; 
-          echo "<div class='board__content'></div>";
-          echo "</div>";
-          echo "<div class='hidden'> {divsurprise} </div>";
-        ?>
-        <div class='controller'>
-          <div class='controller__jump'>jump</div>
-          <div class='controller__stop'>stop</div>
-          <div class='controller__continue'>continure</div>
-          <div class='controller__replay'>replay</div>
-        </div>
-        <script src='js/lv2.js'></script>
-        <script src='js/main.js'></script>
-        <?php
-      } else {
-        echo "<div class='board'>"; 
-        echo "<div class='board__content'>輸入錯誤 token 傳送失敗</div>";
-        echo "</div>";
-        ?>
-        <div class='controller'>
-          <a href='./index.html'>從頭再來</a>
-          <a onclick='history.back()'>回上一關</a>
-        </div>
-        <?php
-        }
-        ?>
+    <div class='hidden'> {divsurprise} </div>
+    <?php if(isset($_GET['token']) && $_GET['token']==='bad18') {?> 
+      <div class='main'>
+        <?php include_once('template/board.html') ?>
+        <?php include_once('template/controller.html') ?>
+      </div>
+      <script src='js/main.js'></script>
+      <script src='js/lv2.js'></script>
+    <?php } else { ?>
+      <div class='main'>
+        <?php include_once('template/board.html') ?>
+        <?php include_once('template/controller.html') ?>
+      </div>
+      <script src='js/main.js'></script>
+      <script src='js/lv2.js'></script>
+    <?php } ?>
   </body>
 </html>

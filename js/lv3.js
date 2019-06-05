@@ -13,7 +13,7 @@ let strings = [
   },
   {
     name: 'system',
-    content: "[系統] 有一個村民死亡",
+    content: "[系統] 又有一個村民死亡",
   },
   {
     name: 'me',
@@ -28,3 +28,6 @@ let strings = [
     content: "[系統] 前往 lv4: 請找出潛藏在瀏覽器中的第二個怪物",
   },
 ];
+
+const type = new Type(strings)
+type.typingEffect();

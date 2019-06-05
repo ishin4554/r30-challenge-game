@@ -65,3 +65,6 @@ let strings = [
     content: "[系統] 前往 lv1 : 請透過 query string 傳入 token",
   },
 ];
+
+const type = new Type(strings)
+type.typingEffect();
