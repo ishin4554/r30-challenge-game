@@ -32,7 +32,7 @@
         <?php include_once('template/controller.html') ?>
       </div>
       <script src='js/main.js'></script>
-      <script src='js/lv2.js'></script>
+      <script src='js/failmsg.js'></script>
     <?php } ?>
   </body>
 </html>

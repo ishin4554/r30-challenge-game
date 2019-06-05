@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title> r3:0 lv8 </title>
+    <title> r3:0 lv10 </title>
     <meta charset='utf-8' />
     <link rel='stylesheet' href='css/main.css' />
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC|Overpass+Mono&display=swap" rel="stylesheet">
@@ -8,7 +8,7 @@
   <body>
     <nav class='nav'>
       <div> r3:0 異世界網站挑戰 </div>
-      <div> 關卡: 8 </div>
+      <div> 關卡: 10 </div>
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
