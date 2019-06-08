@@ -1,9 +1,23 @@
 {
   "name": "m3nt0r",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "r30:challenge game",
+  "main": "index.html",
   "dependencies": {},
+  "devDependencies": {
+    "cypress": "^3.3.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishin4554/javascript-review-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishin4554/javascript-review-game/issues"
+  },
+  "homepage": "https://github.com/ishin4554/javascript-review-game#readme"
 }
