@@ -37,7 +37,7 @@ let strings = [
   },
   {
     name: 'system',
-    content: "[系統] 前往 lv10: 請解開留在 html 裡面的程式碼，輸入正確的 token",
+    content: "[系統] 前往 lv10: 請解開留在 html 裡面的 php 程式碼，輸入正確的 token",
   },
 ];
 
