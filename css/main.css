@@ -25,11 +25,25 @@ body, html {
 .nav__help{
   color: yellow;
 }
+.board::-webkit-scrollbar {
+  width: 5px;
+}
+.board::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+}
+.board::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(0, 0, 0);
+}
 .board{
+  height: calc(100vh - 144px);
+  overflow-y: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
+  flex-flow: column nowrap;
+}
+.board > :first-child {
+  margin-top: auto !important;
 }
 .board__content{
   margin-right: 50px;
@@ -38,22 +52,33 @@ body, html {
 }
 .controller {
   width: 100%;
-  background: #000;
-  border-top: 1px solid #fff;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px 0;
+  justify-content: space-between;
+  padding: 15px 0px;
+  background: rgb(0, 0, 0);
+  border-top: 1px solid rgb(255, 255, 255);
 }
+
 .controller * {
   margin-left: 20px;
   cursor: pointer;
   border: 1px solid #000;
 }
-.controller *:hover::after {
-  content: ' <';
-  color: red;
+.controller__jump:hover { background: red; }
+.controller__stop:hover { background: red; }
+.controller__replay:hover { background: red; }
+.controller__left a:hover { background: red; }
+
+.controller__left {
+  display: flex;
+  flex-direction: row;
 }
+.controller__right {
+  margin-right: 20px;
+}
+
+.controller__right a:hover{ background: green;}
+
 .system--text {
   color: red;
 }
@@ -62,4 +87,8 @@ body, html {
 }
 a {
   text-decoration: none;
+}
+
+.hide{
+  display: none;
 }

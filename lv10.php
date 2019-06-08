@@ -1,3 +1,14 @@
+<?php
+  function isTokenValid($token) {
+    if (strlen($token) !== 8) return false;
+    for($i = 1; $i <= 7; $i+=2) {
+      if ((ord($token[$i]) * ord($token[$i - 1])) % $i !== 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+?>
 <html>
   <head>
     <title> r3:0 lv10 </title>
@@ -12,13 +23,12 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] 其實 SQL 還有一個叫做 NOT IN 語法 ?</div>";
+          echo "<div class='nav__help'>[大賢者] 找找看公倍數？</div>";
         }
       }
       ?>
     </nav>
-    <?php if(isset($_GET['token']) && 
-          ($_GET['token']==='swfcwnigs' || $_GET['token']==='swfcwnisg')) { ?> 
+    <?php if(isset($_GET['token']) && isTokenValid($_GET['token'])) { ?> 
       <div class='main'>
         <?php include_once('template/board.html') ?>
         <?php include_once('template/controller.html') ?>

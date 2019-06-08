@@ -50,7 +50,7 @@ let strings = [
   },
   {
     name: 'system',
-    content: "[系統] 例如： /lv1.php?token=xxx",
+    content: "[系統] 例如： /lv1.php?token=xxx，xxx 不包含大括號",
   },
   {
     name: 'system',

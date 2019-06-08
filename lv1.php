@@ -12,7 +12,7 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] 想想看 query string</div>";
+          echo "<div class='nav__help'>[大賢者] 可以查查看怎麼用 parseInt </div>";
         }
       }
       ?>

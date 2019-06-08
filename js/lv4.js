@@ -46,11 +46,13 @@ class lv4Type extends Type {
       this.switchStyle(item);
       dq('.board').append(item);
       this.typingEffect(); 
+      scroll();
     } else if(this.countStr === this.strings.length - 1) {
       const item = document.createElement('div');
       item.className = 'board__content system--text';
       item.innerHTML='[系統] token <span class="special">{csspersona!}</span> 已經給你了';
       dq('.board').append(item);
+      dq('.controller__replay').classList.toggle('hide');
     }
   }
 }

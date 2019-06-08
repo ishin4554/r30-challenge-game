@@ -12,7 +12,7 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] 也許這是 aaencode ?</div>";
+          echo "<div class='nav__help'>[大賢者] 小餅乾說的是 cookie 嗎 ?</div>";
         }
       }
       ?>

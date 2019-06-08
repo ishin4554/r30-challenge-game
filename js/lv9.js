@@ -25,19 +25,19 @@ let strings = [
   },
   {
     name: 'other',
-    content: "m3nt0r: 但因為我很久沒有打掃了，你的武器不是 gun 也不是 sword，我只記得我放在 table challenger 下 weapon 這個欄位裡",
+    content: "m3nt0r: 你喜歡暴力解？早說，那找出武器的工作就交給你了！這裡有一堆混亂的程式碼，解開來才有武器",
   },
   {
     name: 'me',
-    content: "也太混亂了吧？",
+    content: "這還是智力解啊？",
   },
   {
     name: 'other',
-    content: "m3nt0r: 你再告訴我可能在哪裡，我馬上傳給你～ 啊，只要武器，不要其他一堆雜物喔",
+    content: "m3nt0r: 也不是不能暴力解",
   },
   {
     name: 'system',
-    content: "[系統] 前往 lv10: 請把找到武器的「最短」 SQL 語法的每一個字的第一個字母合在一起用 token 傳給 m3nt0r",
+    content: "[系統] 前往 lv10: 請解開留在 html 裡面的程式碼，輸入正確的 token",
   },
 ];
 

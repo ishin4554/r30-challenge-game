@@ -8,11 +8,17 @@
   <body>
     <nav class='nav'>
       <div> r3:0 異世界網站挑戰 </div>
-      <div> 關卡: 6 </div>
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] javascript 出了什麼事了</div>";
+          echo "<div> 關卡: 6 </div>";
+          echo "<div class='nav__help'>[大賢者] 也許這是 aaencode ?</div>";
+        }
+      } else {
+        if (isset($_GET['token']) && $_GET['token']==='fail') {
+          echo "<div> 關卡: 5 </div>";
+        } else {
+          echo "<div> 關卡: 6 </div>";
         }
       }
       ?>

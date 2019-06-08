@@ -13,7 +13,7 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] 可以開 html 看看</div>";
+          echo "<div class='nav__help'>[大賢者] 是不是 css 做了什麼手腳</div>";
         }
       }
       ?>

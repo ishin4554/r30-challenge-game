@@ -1,3 +1,10 @@
+let isStop = false;
+
+function scroll(){
+  var elem = document.querySelector('.board');
+  elem.scrollTop = elem.scrollHeight;
+}
+
 function dq(selector) {
   return document.querySelector(selector);
 }
@@ -23,6 +30,9 @@ class Type {
       this.switchStyle(item);
       dq('.board').append(item);
       this.typingEffect();
+      scroll();
+    } else if (this.countStr === this.strings.length - 1) {
+      dq('.controller__replay').classList.toggle('hide');
     }
   }
 
@@ -41,10 +51,14 @@ class Type {
 
   stopTyping() {
     clearTimeout(this.timer);
+    dq('.controller__stop').innerText = '繼續對話';
+    isStop = true;
   }
   
   continueTyping() {
-    this.typingEffect()
+    dq('.controller__stop').innerText = '暫停對話';
+    isStop = false;
+    this.typingEffect();
   }
   
   showAllText() {
@@ -52,11 +66,14 @@ class Type {
   }
   
   replayText() {
-    dq('.board').innerHTML = '<div class="board__content"></div>';
+    dq('.controller__replay').classList.toggle('hide');
+    dq('.board').innerHTML ='<div class="board__content"></div>';
     this.countStr = 0;
     this.countChar = 0; 
     this.timer = 0; 
     this.speed = 100; 
+    isStop = false;
+    dq('.controller__stop').innerText = '暫停對話';
     this.typingEffect();
   }
 }
@@ -67,10 +84,11 @@ dq('.controller').addEventListener('click', (evt) => {
       type.showAllText();
       break;
     case 'controller__stop':
-      type.stopTyping();
-      break;  
-    case 'controller__continue':
-      type.continueTyping();
+      if (isStop) {
+        type.continueTyping();
+      } else {
+        type.stopTyping();
+      }
       break;  
     case 'controller__replay':
       type.replayText();

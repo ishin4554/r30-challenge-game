@@ -12,13 +12,24 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] 會不會在 header 裡面 ?</div>";
+          echo "<div class='nav__help'>[大賢者] 找找看公倍數？</div>";
         }
       }
       ?>
     </nav>
     <?php if(isset($_GET['token']) && $_GET['token']==='headshot') {?> 
       <div class='main'>
+        <!-- secret logic
+          function isTokenValid($token) {
+            if (strlen($token) !== 8) return false;
+            for($i = 1; $i <= 7; $i+=2) {
+              if ((ord($token[$i]) * ord($token[$i - 1])) % $i !== 0) {
+                return false;
+              }
+            }
+            return true;
+          }
+        -->
         <?php include_once('template/board.html') ?>
         <?php include_once('template/controller.html') ?>
       </div>
