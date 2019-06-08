@@ -1,23 +1,12 @@
 {
   "name": "m3nt0r",
   "version": "1.0.0",
-  "description": "這個遊戲原本是計畫中第二次複習週的挑戰遊戲，大概是課程進行到 45 天左右的時候我先行完成了複習，老師問我要不要試試看開發第二個挑戰遊戲，當下真的是瘋狂開心到二話不說就答應了 XDDD。",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "cypress": "^3.3.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ishin4554/javascript-review-game.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ishin4554/javascript-review-game/issues"
-  },
-  "homepage": "https://github.com/ishin4554/javascript-review-game#readme"
+  }
 }
