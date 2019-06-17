@@ -33,7 +33,15 @@ let strings = [
   },
   {
     name: 'system',
-    content: "[系統] 敬請期待：）",
+    content: "[系統] 有任何心得也可以在下方連結留言。",
+  },
+  {
+    name: 'system',
+    content: "[系統] https://gist.github.com/ishin4554/f332c54d6cf8f11d085aa56af0b6e966",
+  },
+  {
+    name: 'system',
+    content: "[系統] 未來有機會將會有新的關卡，敬請期待。",
   },
 ];
 
