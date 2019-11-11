@@ -2,6 +2,7 @@
 
 學習網站概念的闖關遊戲
 > [DEMO](https://r30challenge.herokuapp.com/)
+
 > [闖關者心得](https://hsiangfeng.github.io/javascript/20190728/313613648/)
 
 ![封面照片](https://i.imgur.com/yQrPKg1.png)
