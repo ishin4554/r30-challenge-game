@@ -1,10 +1,11 @@
 <?php if(isset($_GET['input'])) { 
-    $token = '1234';
+    $token = '5371';
     $input = $_GET['input'];
     for($i=0; $i<4; $i++) {
-      usleep(1000 * 1000);
       if ($token[$i] !== $input[$i]) {
         die("wrong token");
+      } else {
+        usleep(1000 * 1000);
       }
     }
     echo "correct";

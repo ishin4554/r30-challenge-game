@@ -1,5 +1,18 @@
 <?php 
   date_default_timezone_set("Asia/Taipei");
+  function isTokenValid($token) {
+    $h = date('H');
+    $m = date('i'); 
+    $a = $h * $m + 42;
+    $count = 0;
+    for($i = 1; $i <= 8; $i++) {
+      $count += ord($token[$i]) - 65;
+    }
+    if ($count <= 100) {
+      return false;
+    }
+    return $a % $count === 0;
+  }
 ?>
 <html>
   <head>
@@ -21,11 +34,24 @@
       ?>
     </nav>
     <?php if(isset($_GET['token'])) { 
-      $input = $_GET['token'];
-      $h = date('H');
-      $m = date('i');
-      if($h*$m + $token === 3030) { 
+      $token = $_GET['token'];
+      if(isTokenValid($token)) { 
     ?> 
+        <!-- secret logic
+          function isTokenValid($token) {
+            $h = date('H');
+            $m = date('i'); 
+            $a = $h * $m + 42;
+            $count = 0;
+            for($i = 1; $i <= 8; $i++) {
+              $count += ord($token[$i]) - 65;
+            }
+            if ($count <= 100) {
+              return false;
+            }
+            return $a % $count === 0;
+          }
+        -->
       <div class='main'>
         <?php include_once('template/board.html') ?>
         <?php include_once('template/controller.html') ?>

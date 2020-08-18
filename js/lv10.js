@@ -61,13 +61,15 @@ let strings = [
   },
   {
     name: 'system',
-    content: "[系統] 前往 lv11: 請找出放在 json 檔裡面的密碼進入城堡",
+    content: "[系統] 前往 lv11: 請從 api 中找到密碼進入城堡",
   },
 ];
 
-fetch('https://github.com/ishin4554/r30challenge_json/blob/master/r30.json')
+fetch('https://glacial-everglades-11859.herokuapp.com/api.php', {
+  method: 'OPTIONS',
+})
   .then(res => res.json())
   .then(data => console.log(data))
 
 const type = new Type(strings)
-type.typingEffect( );
+type.typingEffect();

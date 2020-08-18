@@ -54,6 +54,7 @@ let strings = [
   {
     name: 'system',
     content: "[系統] 未來有機會將會有新的關卡，敬請期待。",
+  }
 ];
 
 

@@ -1,7 +1,7 @@
 let strings = [
   {
     name: 'me',
-    content: "（可惡這個委託 TAT 看我還不帶一波）",
+    content: "（可惡既然都被拜託了 TAT 看我還不帶一波）",
   },
   {
     name: 'me',
@@ -33,7 +33,7 @@ let strings = [
   },
   {
     name: 'system',
-    content: `[系統] 前往 lv13: 打倒小餅乾`,
+    content: `[系統] 前往 lv13: 找找看關於 cookie 的秘密打倒小餅乾`,
   },
 ];
 

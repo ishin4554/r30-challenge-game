@@ -15,7 +15,7 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] 似乎有某種潛在規則在阻止我 .....</div>";
+          echo "<div class='nav__help'>[大賢者] 不同世界的 CORS 在阻止我 .....</div>";
         }
       }
       ?>
