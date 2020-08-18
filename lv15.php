@@ -5,7 +5,7 @@
     $m = date('i'); 
     $a = $h * $m + 42;
     $count = 0;
-    for($i = 1; $i <= 8; $i++) {
+    for($i = 0; $i < 8; $i++) {
       $count += ord($token[$i]) - 65;
     }
     if ($count <= 100) {
