@@ -25,7 +25,7 @@ let strings = [
   },
   {
     name: 'me',
-    content: '打開吧！console !',
+    content: '打開吧！Dev Tools !',
   },
   {
     name: 'system',

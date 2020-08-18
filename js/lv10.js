@@ -61,7 +61,7 @@ let strings = [
   },
   {
     name: 'system',
-    content: "[系統] 前往 lv11: 請從 api 中找到密碼進入城堡",
+    content: "[系統] 前往 lv11: 請從 POST 中找到密碼進入城堡",
   },
 ];
 

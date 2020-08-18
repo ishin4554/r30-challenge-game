@@ -1,14 +1,12 @@
-<?php if(isset($_GET['input'])) { 
+<?php if(isset($_GET['token']) && $_GET['token'] !== "5371") { 
     $token = '5371';
-    $input = $_GET['input'];
+    $input = $_GET['token'];
     for($i=0; $i<4; $i++) {
-      if ($token[$i] !== $input[$i]) {
-        die("wrong token");
-      } else {
+      if ($token[$i] === $input[$i]) {
         usleep(1000 * 1000);
       }
     }
-    echo "correct";
+    die("回來了？");
   }
 ?>
 <html>
@@ -25,18 +23,28 @@
       <?php
       if(isset($_GET['hint'])){
         if($_GET['hint']==='help'){
-          echo "<div class='nav__help'>[大賢者] response 的時間好像越來越快？</div>";
+          echo "<div class='nav__help'>[大賢者] response 的時間好像越來越慢？</div>";
         }
       }
       ?>
     </nav>
-    <?php if(isset($_GET['token']) && $_GET['token'] === "1234") { ?> 
+    <?php if(isset($_GET['token']) && $_GET['token'] === "5371") { ?> 
       <div class='main'>
-        <!-- 
-          function isTimeCheck(h, m, token) {
-            return r${h * m + token} === '3030';
+        <!-- secret logic
+          function isTokenValid($token) {
+            $h = date('H');
+            $m = date('i'); 
+            $a = $h * $m + 42;
+            $count = 0;
+            for($i = 1; $i <= 8; $i++) {
+              $count += ord($token[$i]) - 65;
+            }
+            if ($count <= 100) {
+              return false;
+            }
+            return $a % $count === 0;
           }
-         -->
+        -->
         <div id="time"></div>
         <?php include_once('template/board.html') ?>
         <?php include_once('template/controller.html') ?>
