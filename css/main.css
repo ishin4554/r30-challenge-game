@@ -142,6 +142,27 @@ div[data-message-id] span {
   margin-top: 20px;
 } 
 
+.login__handle {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+}
+
+.login__handle > * {
+  border: solid 1px white;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.login__handle > *:first-child:hover::after {
+  content: "（笑）";
+  font-size: 8px;
+  display: inline-block;
+}
+
 .modal {
   position: fixed;
   display: flex;

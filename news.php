@@ -16,6 +16,10 @@
           <input id="account" type="text" />
           <label for="password">密碼</label>
           <input id="password" type="password" />
+          <div class="login__handle">
+            <div>登入</div>
+            <div class="login__cancel">取消</div>
+          </div>
         </div>
     </nav>
     <div class='modal hidden'>

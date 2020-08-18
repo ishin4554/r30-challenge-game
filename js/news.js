@@ -22,3 +22,7 @@ document.querySelector('.message__board').addEventListener('click' ,evt => {
 document.querySelector('.login__label').addEventListener('click', () => {
   document.querySelector('.modal').classList.add('hidden');
 })
+
+document.querySelector('.login__cancel').addEventListener('click', () => {
+  document.querySelector('.login').checked = false;
+})
