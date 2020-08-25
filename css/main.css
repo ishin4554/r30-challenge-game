@@ -88,7 +88,113 @@ body, html {
 a {
   text-decoration: none;
 }
-
 .hide{
   display: none;
+}
+
+div[data-message-id] {
+  padding: 0 2rem;
+}
+
+div[data-message-id] span {
+  color: yellow;
+}
+
+.login__label {
+  cursor: pointer;
+}
+.login__modal {
+  display: none;
+}
+.login__modal input {
+  border: none;
+  border-bottom: 1px solid white;
+  background: black;
+  color: white;
+}
+.login__modal input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid yellow;
+}
+.login {
+  opacity: 0;
+}
+.login:checked ~ .login__label {
+  text-decoration: underline;
+}
+.login:checked ~ .login__modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background: #000;
+  padding: 2rem 4rem;
+} 
+
+.login:checked ~ .login__modal label {
+  margin-top: 20px;
+} 
+
+.login__handle {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+}
+
+.login__handle > * {
+  border: solid 1px white;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.login__handle > *:first-child:hover::after {
+  content: "（笑）";
+  font-size: 8px;
+  display: inline-block;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 50%;
+  border: 1px solid white;
+  background: black;
+  padding: 2rem;
+}
+
+.modal__title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.message__board {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+}
+.message {
+  border-bottom: 1px solid white;
+  cursor: pointer;
 }

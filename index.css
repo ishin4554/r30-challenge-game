@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "item1 item1 item1 item2 item2 item2"
+        "item3 item3 item4 item4 item5 item5"
+        "item6 item6 item6 item7 item7 item7";
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6"
+            "item7";
+    }
+}

@@ -21,29 +21,55 @@ let strings = [
   },
   {
     name: 'other',
-    content: "m3nt0r: 異世界就拜託你了",
+    content: "m3nt0r: 異世界就拜託你了（一聲巨響城堡們轟隆隆地開啟）",
   },
   {
     name: 'me',
-    content: "(城堡突然發出轟隆隆的巨響，一扇門從我面前開啟)",
+    content: "......（走進城堡的巨門)",
+  },
+  {
+    name: 'me',
+    content: "(一陣天旋地轉又出現在城堡門口)",
+  },
+  {
+    name: 'me',
+    content: "......",
+  },
+  {
+    name: 'me',
+    content: "......（走進城堡的巨門)",
+  },
+  {
+    name: 'me',
+    content: "(一陣天旋地轉又出現在城堡門口)",
+  },
+  {
+    name: 'me',
+    content: "這是 bug 嗎？",
+  },
+  {
+    name: 'other',
+    content: "石像：（一旁的石像抖動笑了起來）噗噗，你看起來不像異世界人 >3<",
+  },
+  { 
+    name: 'me',
+    content: "......對，我不小心轉生成了工具人。"
+  },
+  {
+    name: 'other',
+    content: "石像：轉生成工具人是否搞錯了什麼 (*´ω`) 這樣你要有身份證明才行～",
   },
   {
     name: 'system',
-    content: "[系統] 接下來的關卡將不只需要瀏覽器，還會需要其他工具，你準備好了嗎？",
-  },
-  {
-    name: 'system',
-    content: "[系統] 有任何心得也可以在下方連結留言。",
-  },
-  {
-    name: 'system',
-    content: "[系統] https://gist.github.com/ishin4554/f332c54d6cf8f11d085aa56af0b6e966",
-  },
-  {
-    name: 'system',
-    content: "[系統] 未來有機會將會有新的關卡，敬請期待。",
+    content: "[系統] 前往 lv11: 請從 POST 中找到密碼進入城堡",
   },
 ];
+
+fetch('https://glacial-everglades-11859.herokuapp.com/api.php', {
+  method: 'OPTIONS',
+})
+  .then(res => res.json())
+  .then(data => console.log(data))
 
 const type = new Type(strings)
 type.typingEffect();
