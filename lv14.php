@@ -1,4 +1,6 @@
-<?php if(isset($_GET['token']) && $_GET['token'] !== "5371") { 
+<?php 
+  date_default_timezone_set("Asia/Taipei");
+  if(isset($_GET['token']) && $_GET['token'] !== "5371") { 
     $token = '5371';
     $input = $_GET['token'];
     for($i=0; $i<4; $i++) {

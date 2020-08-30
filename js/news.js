@@ -1,7 +1,7 @@
 document.querySelector('.message__board').addEventListener('click' ,evt => {
   if(evt.target.closest('.message')) {
     const id = evt.target.getAttribute('data-message-id');
-    if(!evt.target.classList.contains('admin')) {
+    if(id !== '888888') {
       fetch(`./news_api.php?id=${id}`)
         .then(res => res.text())
         .then(data => {
