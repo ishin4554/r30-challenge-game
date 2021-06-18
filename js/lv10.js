@@ -65,7 +65,7 @@ let strings = [
   },
 ];
 
-fetch('https://nameless-cliffs-19948.herokuapp.com/api.php', {
+fetch('https://r30-api.herokuapp.com/api.php', {
   method: 'OPTIONS',
 })
   .then(res => res.json())
